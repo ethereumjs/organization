@@ -7,4 +7,3 @@ Use the [issue tracker](https://github.com/ethereumjs/organization/issues) as a 
 
 * [![Gitter](https://img.shields.io/gitter/room/ethereum/ethereumjs-lib.svg?style=flat-square)](https://gitter.im/ethereum/ethereumjs-lib) or #ethereumjs on freenode 
 
-* [IRC Logs](https://scrollback.io/ethereumjs/all)
