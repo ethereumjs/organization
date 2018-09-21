@@ -1,0 +1,126 @@
+[
+  {
+    "name": "PR state: WIP",
+    "color": "#fbca04"
+  },
+  {
+    "name": "PR state: blocked",
+    "color": "#ec8a85"
+  },
+  {
+    "name": "PR state: do-not-merge",
+    "color": "#84b6eb"
+  },
+  {
+    "name": "PR state: merge ready",
+    "color": "#afe3b7"
+  },
+  {
+    "name": "PR state: needs changes",
+    "color": "#f8a955"
+  },
+  {
+    "name": "PR state: needs review",
+    "color": "#1d76db"
+  },
+  {
+    "name": "PR state: open discussion",
+    "color": "#fdcfc2"
+  },
+  {
+    "name": "effort: E1 hours",
+    "color": "#a5e3be"
+  },
+  {
+    "name": "effort: E2 days",
+    "color": "#a5e3be"
+  },
+  {
+    "name": "effort: E3 weeks",
+    "color": "#a5e3be"
+  },
+  {
+    "name": "eval: can't reproduce",
+    "color": "#c3e2f3"
+  },
+  {
+    "name": "eval: duplicate",
+    "color": "#c3e2f3"
+  },
+  {
+    "name": "eval: needs context",
+    "color": "#c3e2f3"
+  },
+  {
+    "name": "eval: needs discussion",
+    "color": "#c3e2f3"
+  },
+  {
+    "name": "eval: needs validation",
+    "color": "#c3e2f3"
+  },
+  {
+    "name": "good first issue",
+    "color": "#62add8"
+  },
+  {
+    "name": "help wanted",
+    "color": "#18ad1b"
+  },
+  {
+    "name": "prio: P1 critical",
+    "color": "#fd6f60"
+  },
+  {
+    "name": "prio: P2 very important",
+    "color": "#fd9579"
+  },
+  {
+    "name": "prio: P3 important",
+    "color": "#fdc09f"
+  },
+  {
+    "name": "prio: P4 nice-to-have",
+    "color": "#fde2b4"
+  },
+  {
+    "name": "type: bug",
+    "color": "#e3e3e3"
+  },
+  {
+    "name": "type: discussion / question",
+    "color": "#e3e3e3"
+  },
+  {
+    "name": "type: docs",
+    "color": "#e3e3e3"
+  },
+  {
+    "name": "type: external",
+    "color": "#e3e3e3"
+  },
+  {
+    "name": "type: feature",
+    "color": "#e3e3e3"
+  },
+  {
+    "name": "type: meta",
+    "color": "#e3e3e3"
+  },
+  {
+    "name": "type: performance",
+    "color": "#e3e3e3"
+  },
+  {
+    "name": "type: refactor",
+    "color": "#e3e3e3"
+  },
+  {
+    "name": "type: security",
+    "color": "#e3e3e3"
+  },
+  {
+    "name": "type: tests",
+    "color": "#e3e3e3"
+  }
+]
