@@ -40,6 +40,10 @@
     "color": "#a5e3be"
   },
   {
+    "name": "effort: E4 months",
+    "color": "#a5e3be"
+  },
+  {
     "name": "eval: can't reproduce",
     "color": "#c3e2f3"
   },
@@ -64,6 +68,10 @@
     "color": "#62add8"
   },
   {
+    "name": "good bounty",
+    "color": "#584bd1"
+  },
+  {
     "name": "help wanted",
     "color": "#18ad1b"
   },
@@ -82,6 +90,10 @@
   {
     "name": "prio: P4 nice-to-have",
     "color": "#fde2b4"
+  },
+  {
+    "name": "prio: +urgent",
+    "color": "#bf4639"
   },
   {
     "name": "type: bug",
@@ -104,6 +116,10 @@
     "color": "#e3e3e3"
   },
   {
+    "name": "type: enhancement",
+    "color": "#e3e3e3"
+  },
+  {
     "name": "type: meta",
     "color": "#e3e3e3"
   },
@@ -116,11 +132,39 @@
     "color": "#e3e3e3"
   },
   {
+    "name": "type: CI",
+    "color": "#e3e3e3"
+  },
+  {
+    "name": "type: release",
+    "color": "#e3e3e3"
+  },
+  {
     "name": "type: security",
     "color": "#e3e3e3"
   },
   {
     "name": "type: tests",
     "color": "#e3e3e3"
+  },
+  {
+    "name": "bounty: needs spec",
+    "color": "#cdc8f7"
+  },
+  {
+    "name": "bounty: open",
+    "color": "#ada5ef"
+  },
+  {
+    "name": "bounty: started",
+    "color": "#ada5ef"
+  },
+  {
+    "name": "bounty: submitted",
+    "color": "#ada5ef"
+  },
+  {
+    "name": "bounty: done",
+    "color": "#ada5ef"
   }
 ]
