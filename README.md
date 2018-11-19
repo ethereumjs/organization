@@ -32,3 +32,10 @@ Inspirations for the labeling system:
 
 * [Sane GitHub Labels](https://medium.com/@dave_lunny/sane-github-labels-c5d2e6004b63) article
 * ``Py-EVM`` [issue](https://github.com/ethereum/py-evm/issues) and [PR](https://github.com/ethereum/py-evm/pulls) label system
+
+### Documentation
+
+Sources for documentation can be found in the [docs](./docs/) directory. Documentation is generated using the Python [Sphinx](http://www.sphinx-doc.org) documentation generator in ``v1.8.x`` using a Python ``3.6`` environment.
+
+Documentation can be manually generated running ``make html`` from the ``docs`` directory.
+
