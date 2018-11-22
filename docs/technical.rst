@@ -182,36 +182,92 @@ Code Quality
 Testing
 -------
 
+Test Framework
+^^^^^^^^^^^^^^
+
+Most ``EthereumJS`` libaries use `tape <https://github.com/substack/tape>`_ 
+for running tests. Have a look at one of the libraries (e.g.
+`merkle-patricia-tree <https://github.com/ethereumjs/merkle-patricia-tree>`_)
+for reference.
+
+.. note::
+   It should be examined if this is a good choice and eventually
+   `Mocha <https://mochajs.org/>`_ should be preferred, see e.g. 
+   `this comparison <https://www.slant.co/versus/12696/12698/~mocha_vs_tape>`_.
+
+Code Coverage
+^^^^^^^^^^^^^
+
+For coverage runs `nyc <https://istanbul.js.org/>`_ is used. Results are passed on
+to the ``coveralls.io <https://coveralls.io/>`_ service for coverage reports on
+CI runs.
+
+.. note::
+   If you stumble over libraries still using ``istanbul`` as a coverage runner,
+   do an update to ``nyc``!
+   
+Documentation
+-------------
+
+On many libraries `documentation.js <https://documentation.js.org/>`_ is used
+for generating an API documentation from `JSDoc <http://usejsdoc.org/>`_
+comments.
+
+Beyond the following documentation should be kept up-to-date:
+
+- ``README`` with setup and installation instructions
+- Usage instructions, up-to-date code examples
 
 Continuous Integration (CI)
 ---------------------------
 
+Most ``EthereumJS`` libraries use `Travis CI <https://travis-ci.org/>` for CI
+runs on every PR submitted. Have a look at a ``.travis.yml`` file in the 
+repository you are interested in to get an overview on what is run during the
+CI process.
 
-Documentation
--------------
+One exception is the EthereumJS VM which is using ``CircleCI`` as a platform
+for performance reasons.
 
 .. _shared_libs:
 
 Shared Library Ressources
 =========================
 
+The following libraries set up some shared infrastructure for certain purposes.
 
 .. _shared_libs_testing:
 
 ethereumjs-testing
 ------------------
 
+The `ethereumjs-testing <https://github.com/ethereumjs/ethereumjs-testing>`_
+library is a proxy library for the common `Ethereum Tests <https://github.com/ethereum/tests>_`
+consensus tests. There are additional methods for easily select a specific
+subset of the tests.
+
+The common test library is integrated as a submodule and there are tagged
+releases (no publishing to ``npm`` due to size constraints) which can be used 
+for running the latest tests in ``JavaScript`` libraries.
 
 .. _shared_libs_common:
 
 ethereumjs-common
 -----------------
 
+The `ethereumjs-common` library provides access to chain and hardfork specific
+parameters as well as utilities to easier manage hardfork-specific logic 
+within other ``EthereumJS`` libraries.
 
 .. _shared_libs_config:
 
 ethereumjs-config
 -----------------
 
+``[IN DEVELOPMENT]``
 
+The `ethereumjs-config <https://github.com/ethereumjs/ethereumjs-config>`_ library
+aims to reduce redundancy on library configuration by providing a unified set
+of configuration options (e.g. on linting or code formatting) which can be integrated
+within other libraries.
 
