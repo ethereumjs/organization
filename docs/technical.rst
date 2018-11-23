@@ -1,3 +1,5 @@
+.. _technical_reference:
+
 ===================
 Technical Reference
 ===================
@@ -175,6 +177,8 @@ version number update, a new CHANGELOG entry and eventually some update on the
 docs.
 
 
+.. _git_workflow:
+
 Git Workflow
 ============
 
@@ -195,6 +199,8 @@ Once work on the feature branch is completed and all tests and checks from CI
 (see :ref:`continuous_integration`) pass it goes through a review and eventually
 discussion process and is afterwards merged into a protected ``master`` branch. 
 The ``master`` branch should always be stable and theoretically ready for deployment.
+
+.. _git_guidelines:
 
 Git Guidelines
 --------------
@@ -244,6 +250,8 @@ Rebase your branch often (with ``git rebase master``) and force-push the changes
 to make sure that your changes work well on top of the latest commits and tests
 keep passing.
 
+.. _workflow_best_practices:
+
 Workflow Best Practices
 -----------------------
 
@@ -287,6 +295,8 @@ back-and-forth between contributor and reviewer until everyone is happy.
 Code Quality
 ============
 
+.. _testing:
+
 Testing
 -------
 
@@ -313,7 +323,9 @@ CI runs.
 .. note::
    If you stumble over libraries still using ``istanbul`` as a coverage runner,
    do an update to ``nyc``!
-   
+
+.. _documentation:
+
 Documentation
 -------------
 
@@ -345,6 +357,8 @@ Security
 Security aspects around the EthereumJS libraries should be taken seriously,
 since many of the libraries are used in production in security-sensitive
 environments.
+
+.. _dependency_management:
 
 Dependency Management
 ---------------------

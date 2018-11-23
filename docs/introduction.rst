@@ -42,6 +42,8 @@ Most of the projects above also make use of some of our base-layer libraries.
 ``EthereumJS`` libraries are also used by various other actors within the ecosystem
 like MetaMask, 0x or Augur.
 
+.. _contact:
+
 Team and Contact
 ================
 
@@ -60,9 +62,10 @@ Organizational questions are centered and discussed on the ``organization`` repo
 
 - https://github.com/ethereumjs/organization
 
+.. _ongoing_work_tasks:
 
-Ongoing Work
-============
+Ongoing Work Tasks
+==================
 
 The following is an overview on ongoing work tasks to get an idea on the current
 focus of work. This is also serving internal accounting purposes.
