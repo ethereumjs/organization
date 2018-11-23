@@ -159,22 +159,130 @@ Browser Compatibility
 Releases
 --------
 
+Releases on libraries follow `Semantic Versioning <https://semver.org/>`_, 
+normally releases are published on `npm <https://www.npmjs.com/>`_ and as
+a tagged release on GitHub in the ``Releases`` section.
+
+Every library contains a ``CHANGELOG.md`` file in the root directory,
+listing the changes on the respective release versions (see e.g. 
+`CHANGELOG.md <https://github.com/ethereumjs/ethereumjs-util/blob/master/CHANGELOG.md>`_
+of the ``ethereumjs-util`` library), the changelog entry is copied to the
+GitHub release section on publication of a new release.
+
+Releases go through a PR (see `example PR <https://github.com/ethereumjs/ethereumjs-util/pull/155/files>` 
+on ``ethereumjs-util`` ``v6.0.0`` release), containing the ``package.json``
+version number update, a new CHANGELOG entry and eventually some update on the
+docs.
 
 
-Version Control
-===============
+Git Workflow
+============
 
-Git
+.. _branching_model:
 
 Branching Model
 ---------------
 
+We are using a feature-centric branching model, the 
+`GitHub flow <https://guides.github.com/introduction/flow/>`_ model is coming 
+very much close.
 
-Pull Requests
--------------
+Development of new features is taking place on a dedicated branch and should 
+have some descriptive name for the work done (e.g. ``api-doc-fixes``, 
+``remove-vm-accesses-to-statemanager-trie-cache``, ``new-bloom-filter-tests``).
+
+Once work on the feature branch is completed and all tests and checks from CI
+(see :ref:`continuous_integration`) pass it goes through a review and eventually
+discussion process and is afterwards merged into a protected ``master`` branch. 
+The ``master`` branch should always be stable and theoretically ready for deployment.
+
+Git Guidelines
+--------------
+
+Some guidelines for the ``EthereumJS`` libraries when working with ``Git``
+version control:
+
+Feature branch for all PRs
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+Always do your work on a separate feature branch (see :ref:`branching_model`),
+this also applies when doing work from an own fork of a library.
+
+This makes it easier for reviewers and others interested to test your code
+locally by fetching your code changes from your remote feature branch.
+
+Separate PRs for separate Features
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+If you have separate things you want to change on a library, do separate PRs
+for this. So if you e.g. have some ideas for how to improve the build process and
+want to fix some bug from an issue, theses are two separate PRs.
+
+This is a precondition for a successful review of a PR, since a reviewer has
+a smaller subset of changes and can connect changes undoubtfully to a certain feature.
+It also avoids the situation where unexpected discussions and disagreements
+on a certain subfeature set blocks the whole PR with all other changes.
+
+Meaningful Commit History
+^^^^^^^^^^^^^^^^^^^^^^^^^
+Make sure that you end up with a meaningful commit history on your work:
+
+- Choose self-descriptive commit messages
+- Avoid inconsistent state between commits
+- If you do changes correcting your prior committed work, rebase and squash commits afterwards
+
+.. note::
+   Rebasing can be a hairy process, if you do for the first time it is highly
+   recommended to do a local backup of your repository.
+
+.. note::
+   Rebase work like the above can normally be done with ``git rebase -i master``
+   from the feature branch with an up-to-date ``master`` branch.
+
+Regular Master Rebase
+^^^^^^^^^^^^^^^^^^^^^
+PRs are only reviewed if the branch is up-to-date on the latest ``master`` changes.
+Rebase your branch often (with ``git rebase master``) and force-push the changes,
+to make sure that your changes work well on top of the latest commits and tests
+keep passing.
+
+Workflow Best Practices
+-----------------------
+
+Some best practices which turned out to be practical over time and should be
+followed when working on a new feature:
+
+In doubt: Issue before PR
+^^^^^^^^^^^^^^^^^^^^^^^^^
+If you are planning on introducing major feature changes on a library file an
+issue and describe what you are up to before directly work on a PR. This gives
+others the chance to discuss around your intended changes and avoids potential
+further conflicts along the road.
+
+This especially applies for stuff like:
+
+- Introducing new language features (``Promises``,...)
+- Changing the API of a library
+- Planning security-sensitive changes
+- Switch or introduce new tooling
+
+Describe your Work
+^^^^^^^^^^^^^^^^^^
+Take some time to make both the scope of your work and your work process transparent
+for others. This will ease both discussions and the review process around the
+work being done.
+
+In particular:
+
+- Do a proper and complete task description on your issue or PR
+- Give some regular updates on the current status of your work
+- Especially: drop a note once you are ready
 
 
+Pull Request Reviews
+--------------------
 
+All PRs making changes to the production code base are going through a review
+process. This will normally take some time and will come along with some
+back-and-forth between contributor and reviewer until everyone is happy.
 
 Code Quality
 ============
@@ -199,7 +307,7 @@ Code Coverage
 ^^^^^^^^^^^^^
 
 For coverage runs `nyc <https://istanbul.js.org/>`_ is used. Results are passed on
-to the ``coveralls.io <https://coveralls.io/>`_ service for coverage reports on
+to the `coveralls.io <https://coveralls.io/>`_ service for coverage reports on
 CI runs.
 
 .. note::
@@ -218,6 +326,8 @@ Beyond the following documentation should be kept up-to-date:
 - ``README`` with setup and installation instructions
 - Usage instructions, up-to-date code examples
 
+.. _continuous_integration:
+
 Continuous Integration (CI)
 ---------------------------
 
@@ -228,6 +338,49 @@ CI process.
 
 One exception is the EthereumJS VM which is using ``CircleCI`` as a platform
 for performance reasons.
+
+Security
+========
+
+Security aspects around the EthereumJS libraries should be taken seriously,
+since many of the libraries are used in production in security-sensitive
+environments.
+
+Dependency Management
+---------------------
+
+Dependencies are a main source for also importing security vulnerabilities on a
+library, so the set of dependencies on the libraries should be actively managed
+and regularly reviewed.
+
+Some guidelines:
+
+Minimal Dependencies
+^^^^^^^^^^^^^^^^^^^^
+Every introduction of a new dependency on a library should be carefully considered
+and there has to be solid argument why a new dependency is necessary. This primarily
+applies for production but also for development dependencies. Dependencies listed
+in ``package.json`` should be reviewed on a regular basis if they are still
+necessary or could be removed.
+
+
+Established and maintained Dependencies
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Only (somewhat) established and actively maintained dependencies should be 
+used on the libraries. Some indicators for a not-so-established dependency:
+
+- Low number of ``GitHub`` stars or a similar metric
+- No commit activity for a longer period of time
+- Low download rate on ``npm``
+
+Regular Dependency Updates
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+Dependency versions should be updated on a regular basis, this is also very
+welcome to be done as a ``first-time-contributor`` PR. Don't underestimate
+this task though, since a dependency update almost always come along with some
+necessary changes on a library. It is recommended to always only do one
+dependency at a time, since it becomes easier to attribute if things break at
+some point.
 
 .. _shared_libs:
 
