@@ -33,6 +33,16 @@ Node.js Features
 
 Notes on ``Buffer``, ``safe-buffer``, stuff like that.
 
+Node.js Best Practices
+^^^^^^^^^^^^^^^^^^^^^^
+
+Currently agreed-upon best practices on Node.js development:
+
+- Do not use lock files (``package-lock.json``) on repositories 
+  (instead add to ``.gitignore``), see 
+  `this <https://github.com/ethereumjs/merkle-patricia-tree/pull/62>`_ discussion
+
+
 Programming Language
 --------------------
 
