@@ -43,21 +43,19 @@ Timeline
 R18-2 EthereumJS Client
 =======================
 
-Being very-much late to the party, we have finally started the development of a 
-dedicated EthereumJS client with fast- and light-sync support. Development started 
-in June 2018 on https://github.com/ethereumjs/ethereumjs-client and reactions 
-from the community have been extremely positive with a wide range of reception 
-and development contribution on a high-quality level. With Vinay Pulim we have 
-found a very talented JavaScript developer who will take the lead on this project.
+Although popular clients like Geth and Parity already exist, given the popularity of
+the JavaScript language we have finally started the development of a dedicated
+JavaScript Ethereum client with fast- and light-sync support. Development started
+in June 2018 on https://github.com/ethereumjs/ethereumjs-client and reactions
+from the community have been extremely positive.
 
-Due to limitations of the JavaScript language this is not targeted to be a 
-consensus-critical client implementation but serve for various use cases coming 
-with the popularity of the JavaScript language in general and its specific role on the web like:
+Initially, rather than focus on building a consensus-critical client, we want to
+focus on the following use cases (in order of importance):
 
-- In-Browser light client (Metamask without Infura)
+- In-Browser/NodeJS research & development (sharding, libp2p, etc.) mainly supported by a modular and extensible (plugin-based) architecture
 - In-Browser education applications
 - In-Browser/NodeJS client simulations and visualizations
-- In-Browser/NodeJS research & development (Sharding, Casper,...) mainly supported by a modular and expendable (plugins) architecture
+- In-Browser light client (Metamask without Infura)
 
 Generally the EthereumJS client project has larger similarities with the scope of
 the Trinity project of the Python team. Since JavaScript (like Python) is an extremely
@@ -70,21 +68,14 @@ environment and serve as a better foundation for testing for our Virtual Machine
 implementation.
 
 The client project will also build a solid foundation for continued internal research
-and development efforts. We plan to include new communication layer technologies
-in an exchangeable way - central will be support for Whisper (SHH) message communication
-and libp2p network topology, which will allow to contribute to various communication
-experiments and research on the way to a future sharded Ethereum network. Development
-in this direction is already in progress (libp2p).
+and development efforts. We've already incorporated support for libp2p as an alternate
+transport to RLPx/Devp2p that enables the in-browser light client use-case. In the future,
+we hope to implement a Clique PoA engine and test it on the Goerli testnet, and later build
+a working Ethereum 2.0 stateless client.
 
 At a later point it is also be desired to have a dedicated website for the client
 (similar to https://geth.ethereum.org/) to have a more visible entry point and source
 for information around the client for the community.
-
-.. note::
-   
-   - ``TODO`` Rework project summary text to reflext latest view on project
-   - ``TODO`` Develop a combined strategy / consider synergies with ``ShasperJS`` project
-   - ``TODO`` Develop an idea on synergies, demarcations and separate focus, emphasis regarding MetaMask `Mustekala <https://github.com/MetaMask/mustekala>`_ client project
 
 Timeline
 --------
@@ -96,13 +87,20 @@ Timeline
 
 - ``Q4 2018``
 
-  - 🛠️ Reliable mainnet chain sync (fast and light) including block validation 
-  - ⭕ Test setup on hive 
+  - ✅ Achieve > 90% code coverage via unit/integration tests
+  - 🛠️ Reliable mainnet chain sync (fast and light) including block validation
+  - 🛠 Implement state downloading
 
-- ``Q2 2018``
+- ``Q1 2019``
+
+  - ⭕ Test setup on hive
+  - ⭕ Participate in Kitsunet (https://github.com/MetaMask/mustekala/blob/master/docs/architecture.md#layer-3-kitsunet-peers)
+  - ⭕ Determine Ethereum 2.0 strategy (ShasperJS collaboration? stateless client?)
+
+- ``Q2 2019``
 
   - ⭕ Alpha release of client
-  - ⭕ Proof-of-concept Ethereum 2.0 stateless client
+  - ⭕ Become a signer on the Goerli testnet
   
 R18-3 ShasperJS
 ================
