@@ -4,10 +4,15 @@
 Roadmap
 =======
 
+.. _roadmap_active:
+
+Active Projects
+===============
+
 .. _roadmap_r181_typescript:
 
 R18-1 Transition to TypeScript
-==============================
+------------------------------
 
 There is currently a transition of EthereumJS libraries from JavaScript to 
 `TypeScript <https://www.typescriptlang.org/>`_ in the works. This is a somewhat
@@ -21,7 +26,7 @@ Bringing type safety to the EthereumJS libraries should bring large mid-term
 benefits regarding overall security and robustness of the libraries.
 
 Timeline
---------
+^^^^^^^^
 
 - ``November 2018``
 
@@ -40,8 +45,10 @@ Timeline
 
   - ⭕ All major transitions completed including ``VM``, ``merkle-patricia-tree``
 
+.. _roadmap_r182_client:
+
 R18-2 EthereumJS Client
-=======================
+-----------------------
 
 Although popular clients like Geth and Parity already exist, given the popularity of
 the JavaScript language we have finally started the development of a dedicated
@@ -78,7 +85,7 @@ At a later point it is also be desired to have a dedicated website for the clien
 for information around the client for the community.
 
 Timeline
---------
+^^^^^^^^
 
 - ``Q3 2018``
 
@@ -101,9 +108,18 @@ Timeline
 
   - ⭕ Alpha release of client
   - ⭕ Become a signer on the Goerli testnet
-  
-R18-3 ShasperJS
-================
+
+.. _roadmap_considered:
+
+Considered Projects
+===================
+
+Projects currently under consideration or in a draft state.
+
+.. _roadmap_r191_sharding_tools:
+
+R19-1 Sharding Tools
+--------------------
 
 The all-dominating topic regarding the evolution of Ethereum for the upcoming years 
 will be the implementation of a sharded network together with the integration of 
@@ -123,19 +139,74 @@ There is consensus though that there will be a minimal targeted need with variou
 useful expansions on this without going too broad in scope.
 
 .. note::
-   
-   - ``TODO`` Rework project summary text to reflext latest view on project
-   - ``TODO`` Eventually rename
-   - ``TODO`` Develop a combined strategy / consider synergies with ``EthereumJS Client`` project
-   - ``TODO`` Some roadmap
+   For this to be moved to the ``active`` section this needs a more concrete focus
+   first.
+
+.. _roadmap_r192_assemblyscript:
+
+R19-2 AssemblyScript (eWASM)
+----------------------------
+
+Currently the ``eWASM`` team is working on the implementation of an upgraded 
+Ethereum virtual machine (VM), replacing the existing EVM with a 
+`WebAssembly <https://webassembly.org/>`_ (WASM) compatible VM, a testnet supporting
+this is already `up and running <https://github.com/ewasm/testnet>`_.
+
+This will allow to write smart contracts in various classical non-blockchain
+specific languages. One language specifically targeted for support by the
+eWASM team is `AssemblyScript <https://github.com/AssemblyScript/assemblyscript>`_.
+This language is a subset of ``TypeScript`` which is basically ``JavaScript``
+with type additions. ``TypeScript`` is already supported and will become the default 
+language for ``EthereumJS`` libraries once :ref:`roadmap_r181_typescript` is
+completed.
+
+While ``AssemblyScript`` is syntactically compatible with ``(e)WASM`` it will
+nevertheless take some signifcant high-level work to make this a trusted
+Ethereum smart contract language.
+
+Tasks in this regard are:
+
+- Define and spec out some practically usable high-level API
+- Create code examples
+- Build up some tooling infrastructure
+- Create helper libraries
+- Think about security best practices
+- ...
+
+It would be some natural fit for the ``EthereumJS`` team to take on the 
+high-level part of the ``AssemblyScript`` work (in contrast to the low-level
+task to secure ``AssemblyScript`` to ``eWASM`` compatibility) due to the 
+familiarity with the language and the close relationship with the eWASM team.
+
+.. _roadmap_r193_ewasm_vm:
+
+R19-3 eWASM Kernel VM
+---------------------
+
+In a not-too-distant future the current Ethereum Virtual Machine (EVM) will
+at least gradually and eventually completely be replaced with an 
+`eWASM <https://github.com/ewasm>`_ virtual machine.
+
+For this to be prepared the execution engine/kernel of the ``EthereumJS``
+`VM implementation <https://github.com/ethereumjs/ethereumjs-vm>`_ needs to be
+modularized to allow for a pluggable exchange with a new ``eWASM`` engine.
+On top of this work bindings have to be created to allow communication with
+the execution engine implemented by the ``eWASM`` team.
 
 
-R18-4 AssemblyScript (eWASM)
-============================
+.. _roadmap_finished:
 
-``TODO``
+Finished Projects
+=================
 
-Figure out together with the ``eWASM`` team what could be a shared ground on
-progressing on `AssemblyScript <https://github.com/AssemblyScript/assemblyscript>`_.
+Move projects here once finished (with some note on the outcome).
 
+
+.. _roadmap_canceled:
+
+Canceled Projects
+=================
+
+Move canceled projects here (with some notes on in-between outcome and
+cancellation reason).
 
