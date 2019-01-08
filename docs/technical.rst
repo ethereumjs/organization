@@ -339,14 +339,28 @@ CI runs.
 Documentation
 -------------
 
-On many libraries `documentation.js <https://documentation.js.org/>`_ is used
-for generating an API documentation from `JSDoc <http://usejsdoc.org/>`_
-comments.
+Libraries come with an API documentation generated automatically from comments
+in the code. The actual tool and standard for generating API documentation differs
+for JavaScript and TypeScript projects.
 
-Beyond the following documentation should be kept up-to-date:
+Apart from that, the following documentation should be kept up-to-date:
 
 - ``README`` with setup and installation instructions
 - Usage instructions, up-to-date code examples
+
+JavaScript
+^^^^^^^^^^^^^
+
+In many of the JavaScript libraries `documentation.js <https://documentation.js.org/>`_ is used
+for generating an API documentation from `JSDoc <http://usejsdoc.org/>`_
+comments.
+
+TypeScript
+^^^^^^^^^^^^^
+
+To generate API documentation for a TypeScript project, `TypeDoc <https://github.com/TypeStrong/typedoc>`_ is employed.
+By default, TypeDoc generates HTML documentation. In order to generate Markdown suitable for GitHub, the
+`typedoc-plugin-markdown <https://github.com/tgreyuk/typedoc-plugin-markdown>`_ can be used as a theme for TypeDoc.
 
 .. _continuous_integration:
 
