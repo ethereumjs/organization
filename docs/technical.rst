@@ -21,17 +21,28 @@ Runtime environment for development is `node.js <https://nodejs.org/en/>`_.
 Development should always be possible running the last two ``LTS`` Node.js versions,
 see Node.js `release schedule table <https://github.com/nodejs/Release#release-schedule>`_.
 
-====================== =================================================
-Node.js 8              Supported
-Node.js 10             Supported
-====================== =================================================
+====================== ================= ===============================
+Node Version           Status            Latest Status Change
+====================== ================= ===============================
+Node.js 8              Supported         2018-11-01
+Node.js 10             Supported         2018-11-01
+====================== ================= ===============================
 
 Node.js Features
 ^^^^^^^^^^^^^^^^
 
-``TODO``
+Buffer vs safe-buffer
+"""""""""""""""""""""
+Old Node versions up to versions ``4`` and ``5`` allowed for some unsafe usage
+of the ``Buffer`` API which led to the development of a replacement 
+`safe-buffer <https://github.com/feross/safe-buffer>`_ library. We have now for
+some time dropped support for distibution on all affected Node versions (mainly
+``4``) and usage of ``safe-buffer`` is not needed any more.
 
-Notes on ``Buffer``, ``safe-buffer``, stuff like that.
+.. note::
+   The ``safe-buffer`` is still in 
+   use `on many libraries <https://github.com/search?q=org%3Aethereumjs+safe-buffer&type=Code>`_,
+   this should be removed and updated with direct ``Buffer`` usage.
 
 Node.js Best Practices
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -161,6 +172,21 @@ compiler ``tsc`` command line tool.
 
 .. note::
    ``TODO``: This section has to be expanded.
+
+Node.js Version
+---------------
+
+The following table gives an overview on supported Node versions for distribution:
+
+====================== ================= ===============================
+Node Version           Status            Latest Status Change
+====================== ================= ===============================
+Node.js 4              Dropped           2018-10-01
+Node.js 6              Supported         2018-10-01
+Node.js 8              Supported         2018-11-01
+Node.js 10             In the works      2018-12-01
+====================== ================= ===============================
+
 
 Browser Compatibility
 ---------------------
