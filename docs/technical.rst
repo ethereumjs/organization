@@ -106,8 +106,25 @@ Features supported, encouraged and discouraged from the different ``JavaScript``
 TypeScript
 ^^^^^^^^^^
 
-``TODO``
+TypeScript is a type-safe version of JavaScript that compiles down to JavaScript. Type-safety
+offers a better development experience and improves the reliability and maintainability of
+large projects. TypeScript also produces type definition files to allow upstream projects to
+safely use EthereumJS libraries.
 
+TypeScript language support is a compile-time feature separate from the runtime JavaScript support:
+
+- `TypeScript 3 <https://www.typescriptlang.org/docs/home.html>`_
+
+- ``es5`` target for the compiler
+
+Discouraged language features:
+
+- Use of the ``any`` type
+
+- Experimental features
+
+  - `Decorators <https://www.typescriptlang.org/docs/handbook/decorators.html>`_
+  - ``BigInt`` support
 
 Linting and Formatting
 ----------------------
