@@ -13,8 +13,8 @@ Source Code
 Development Runtime
 -------------------
 
-Node.js Version
-^^^^^^^^^^^^^^^
+Node.js Version Support
+^^^^^^^^^^^^^^^^^^^^^^^
 
 Runtime environment for development is `node.js <https://nodejs.org/en/>`_.
 
@@ -190,8 +190,8 @@ compiler ``tsc`` command line tool.
 .. note::
    ``TODO``: This section has to be expanded.
 
-Node.js Version
----------------
+Node.js Version Support
+-----------------------
 
 The following table gives an overview on supported Node versions for distribution:
 
@@ -199,9 +199,10 @@ The following table gives an overview on supported Node versions for distributio
 Node Version           Status            Latest Status Change
 ====================== ================= ===============================
 Node.js 4              Dropped           2018-10-01
-Node.js 6              Supported         2018-10-01
+Node.js 6              Dropped           2019-02-19
 Node.js 8              Supported         2018-11-01
 Node.js 10             In the works      2018-12-01
+Node.js 11             In the works      2019-02-19
 ====================== ================= ===============================
 
 
