@@ -34,12 +34,25 @@ Timeline
   
 - ``December 2018``
 
-  - 🛠️ First reference implementation (`RLP library <https://github.com/ethereumjs/rlp/pull/37>`_)
-  - 🛠️ Toolchain best practices draft
+  - ✅ First reference implementation (`RLP library <https://github.com/ethereumjs/rlp/pull/37>`_)
+  - ✅ Toolchain best practices draft (new `ethereumjs-config <https://github.com/ethereumjs/ethereumjs-config>`_ library)
   
 - ``February 2019``
 
-  - ⭕ Three more completed transitions, stable toolchain
+  - ✅  Three+ more completed transitions (``acount``, ``util``, ``common``)
+  - ✅  Stable toolchain, ``ethereumjs-config`` ``v1.1.0`` release
+  - ✅  TypeScript preparation for ``VM``, ``merkle-patricia-tree`` library (code modernization, ``ES6``)
+
+- ``March 2019``
+
+  - 🛠️ ``merkle-patricia-tree`` TypeScript release
+  - 🛠️  More toolchain automations (candidates: tests, docs)
+  - 🛠️  1-2 other transitions
+
+- ``April 2019``
+
+  - 🛠️ ``VM`` ``v4.0`` TypeScript release
+  - ⭕  1-2 other transitions
   
 - ``May 2019``
 
