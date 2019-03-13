@@ -122,6 +122,52 @@ Timeline
   - ⭕ Alpha release of client
   - ⭕ Become a signer on the Goerli testnet
 
+
+.. _roadmap_r193_ewasm_vm:
+
+R19-3 eWASM VM/Refactoring
+--------------------------
+
+`eWASM <https://github.com/ewasm/design>`_ is being seriously considered as an
+alternative for the current Ethereum Virtual Machine (EVM) for Ethereum 2.0.
+Parts of eWASM might get integrated into the current Ethereum mainnet as part
+of the Eth 1.x roadmap.
+
+As such, a major focus of the team is to provide tooling for eWASM and integrate
+it into the Javascript `VM implementation <https://github.com/ethereumjs/ethereumjs-vm>`_
+to facilitate eWASM research and prepare for when eWASM makes it to mainnet.
+
+The current implementation is tightly coupled to EVM as the only VM. Therefore
+part of this project is to refactor parts of ethereumjs-vm that are relevant
+to the VM, to make them modular enough for eWASM to be integrated. This refactoring
+is occuring hand-in-hand with the modernization effort.
+
+Timeline
+^^^^^^^^
+
+- ``January 2019``
+
+  - ✅  Started refactoring to prepare for future ewasm integration (`#424 <https://github.com/ethereumjs/ethereumjs-vm/pull/424>`_)
+  - ✅  Open PR on basic support for ewasm precompiles (`#431 <https://github.com/ethereumjs/ethereumjs-vm/pull/431>`_)
+
+- ``February 2019``
+
+  - ✅  Refactored memory manipulation of EVM (`#442 <https://github.com/ethereumjs/ethereumjs-vm/pull/442>`_)
+  - ✅  Replaced static vm logTable with dynamic inline version in EXP opcode (`#450 <https://github.com/ethereumjs/ethereumjs-vm/pull/450>`_)
+
+
+- ``March 2019``
+
+  - ✅  Refactor stack manipulation in EVM (`#460 <https://github.com/ethereumjs/ethereumjs-vm/pull/460>`_)
+  - 🛠️ Refactor EVM execution logic, i.e. interpreter (`#441 <https://github.com/ethereumjs/ethereumjs-vm/pull/441>`_)
+  - 🛠️ Design and refactor rest of EVM, including message execution (Also see `#455 <https://github.com/ethereumjs/ethereumjs-vm/issues/455>`_)
+
+- ``April 2019``
+
+  - 🛠️ Rebase EVM changes to the ewasm precompile PR, and merge
+  - 🛠️ Experiment with solutions for the `sync/async problem <https://github.com/ewasm/design/blob/master/interface_questions.md#ewasm-interface-methods-synchronous-vs-asynchronous>`_
+
+
 .. _roadmap_considered:
 
 Considered Projects
@@ -190,21 +236,6 @@ It would be some natural fit for the ``EthereumJS`` team to take on the
 high-level part of the ``AssemblyScript`` work (in contrast to the low-level
 task to secure ``AssemblyScript`` to ``eWASM`` compatibility) due to the 
 familiarity with the language and the close relationship with the eWASM team.
-
-.. _roadmap_r193_ewasm_vm:
-
-R19-3 eWASM Kernel VM
----------------------
-
-In a not-too-distant future the current Ethereum Virtual Machine (EVM) will
-at least gradually and eventually completely be replaced with an 
-`eWASM <https://github.com/ewasm>`_ virtual machine.
-
-For this to be prepared the execution engine/kernel of the ``EthereumJS``
-`VM implementation <https://github.com/ethereumjs/ethereumjs-vm>`_ needs to be
-modularized to allow for a pluggable exchange with a new ``eWASM`` engine.
-On top of this work bindings have to be created to allow communication with
-the execution engine implemented by the ``eWASM`` team.
 
 
 .. _roadmap_finished:
