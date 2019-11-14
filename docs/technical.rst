@@ -36,7 +36,7 @@ Buffer vs safe-buffer
 Old Node versions up to versions ``4`` and ``5`` allowed for some unsafe usage
 of the ``Buffer`` API which led to the development of a replacement 
 `safe-buffer <https://github.com/feross/safe-buffer>`_ library. We have now for
-some time dropped support for distibution on all affected Node versions (mainly
+some time dropped support for distribution on all affected Node versions (mainly
 ``4``) and usage of ``safe-buffer`` is not needed any more.
 
 .. note::
@@ -262,7 +262,7 @@ Git Guidelines
 Some guidelines for the ``EthereumJS`` libraries when working with ``Git``
 version control:
 
-Feature branch for all PRs
+Feature Branch for All PRs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 Always do your work on a separate feature branch (see :ref:`branching_model`),
 this also applies when doing work from an own fork of a library.
@@ -270,14 +270,14 @@ this also applies when doing work from an own fork of a library.
 This makes it easier for reviewers and others interested to test your code
 locally by fetching your code changes from your remote feature branch.
 
-Separate PRs for separate Features
+Separate PRs for Separate Features
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 If you have separate things you want to change on a library, do separate PRs
 for this. So if you e.g. have some ideas for how to improve the build process and
 want to fix some bug from an issue, theses are two separate PRs.
 
 This is a precondition for a successful review of a PR, since a reviewer has
-a smaller subset of changes and can connect changes undoubtfully to a certain feature.
+a smaller subset of changes and can connect changes definitively to a certain feature.
 It also avoids the situation where unexpected discussions and disagreements
 on a certain subfeature set blocks the whole PR with all other changes.
 
@@ -357,7 +357,7 @@ Testing
 Test Framework
 ^^^^^^^^^^^^^^
 
-Most ``EthereumJS`` libaries use `tape <https://github.com/substack/tape>`_ 
+Most ``EthereumJS`` libraries use `tape <https://github.com/substack/tape>`_
 for running tests. Have a look at one of the libraries (e.g.
 `merkle-patricia-tree <https://github.com/ethereumjs/merkle-patricia-tree>`_)
 for reference.
@@ -466,7 +466,7 @@ some point.
 
 .. _shared_libs:
 
-Shared Library Ressources
+Shared Library Resources
 =========================
 
 The following libraries set up some shared infrastructure for certain purposes.
@@ -477,7 +477,7 @@ ethereumjs-testing
 ------------------
 
 The `ethereumjs-testing <https://github.com/ethereumjs/ethereumjs-testing>`_
-library is a proxy library for the common `Ethereum Tests <https://github.com/ethereum/tests>_`
+library is a proxy library for the common `Ethereum Tests <https://github.com/ethereum/tests>`_
 consensus tests. There are additional methods for easily select a specific
 subset of the tests.
 
