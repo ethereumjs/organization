@@ -76,6 +76,30 @@
     "color": "#18ad1b"
   },
   {
+    "name": "package: account",
+    "color": "#000000"
+  },
+  {
+    "name": "package: block",
+    "color": "#000000"
+  },
+  {
+    "name": "package: blockchain",
+    "color": "#000000"
+  },
+  {
+    "name": "package: common",
+    "color": "#000000"
+  },
+  {
+    "name": "package: tx",
+    "color": "#000000"
+  },
+  {
+    "name": "package: vm",
+    "color": "#000000"
+  },
+  {
     "name": "prio: P0 urgent",
     "color": "#bf4639"
   },
