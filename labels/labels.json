@@ -76,6 +76,10 @@
     "color": "#18ad1b"
   },
   {
+    "name": "prio: P0 urgent",
+    "color": "#bf4639"
+  },
+  {
     "name": "prio: P1 critical",
     "color": "#fd6f60"
   },
@@ -90,10 +94,6 @@
   {
     "name": "prio: P4 nice-to-have",
     "color": "#fde2b4"
-  },
-  {
-    "name": "prio: +urgent",
-    "color": "#bf4639"
   },
   {
     "name": "type: bug",
