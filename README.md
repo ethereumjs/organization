@@ -18,7 +18,7 @@ Have a look at the list of [all current open issues](https://waffle.io/ethereumj
 
 Gitter channel for everyday communication:
 
-[![Gitter](https://img.shields.io/gitter/room/ethereum/ethereumjs-lib.svg?style=flat-square)](https://gitter.im/ethereum/ethereumjs-lib)
+[![Discord][discord-badge]][discord-link]
 
 ## Contribution Guidelines
 
@@ -39,3 +39,5 @@ Sources for documentation can be found in the [docs](./docs/) directory. Documen
 
 Documentation can be manually generated running ``make html`` from the ``docs`` directory.
 
+[discord-badge]: https://img.shields.io/static/v1?logo=discord&label=discord&message=Join&color=blue
+[discord-link]: https://discord.gg/TNwARpR
