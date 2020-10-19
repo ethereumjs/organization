@@ -10,18 +10,26 @@ Foundation**. Work is mainly done within the following GitHub organization:
 
 - https://github.com/ethereumjs
 
-There are currently over 20 active repositories, most (with some exceptions like
-`keythereum <https://github.com/ethereumjs/keythereum>`_ or  
-`ethrpc <https://github.com/ethereumjs/ethrpc>`_) managed by the EF team.
-Some central libraries are an implementation of the Ethereum 
-`Virtual Machine <https://github.com/ethereumjs/ethereumjs-vm>`_, our
-`Client <https://github.com/ethereumjs/ethereumjs-client>`_ project and
-implementations of the `Merkle Patricia Tree <https://github.com/ethereumjs/merkle-patricia-tree>`_
-data structure or the `devp2p <https://github.com/ethereumjs/ethereumjs-devp2p>`_
-networking stack.
+Our central repository is the `ethereumjs-vm <https://github.com/ethereumjs/ethereumjs-vm>`_ 
+monorepo hosting a full featured `TypeScript` Ethereum VM implementation as well as
+related packages like:
 
-Have a look at the overview page linked above to get an impression what
-is currently being worked on as well as other libraries available.
+- Structural blockchain component representations like e.g. the 
+  `block <https://github.com/ethereumjs/ethereumjs-vm/tree/master/packages/block>`_ or
+  `tx <https://github.com/ethereumjs/ethereumjs-vm/tree/master/packages/tx>`_ packages
+- The `common <https://github.com/ethereumjs/ethereumjs-vm/tree/master/packages/common>`_
+  package providing central access to chain and hardfork settings
+- An `Ethash <https://github.com/ethereumjs/ethereumjs-vm/tree/master/packages/ethash>`_
+  implementation
+
+Other noteworthy libraries out of the monorepo scope are e.g. an
+implementation of the `Merkle Patricia Tree <https://github.com/ethereumjs/merkle-patricia-tree>`_,
+the `RLP <https://github.com/ethereumjs/rlp>`_ serialization library or a widely used
+`Util <https://github.com/ethereumjs/ethereumjs-util>`_ library providing utility functions for
+things like hashing, signatures as well as helpers for address and account management.
+
+Have a look at the organizational GitHub overview page linked above to get an impression what
+is currently being worked on as well as the libraries available.
 
 Focus and related Projects
 ==========================
@@ -49,14 +57,13 @@ Team and Contact
 
 ``EthereumJS`` is a strongly community-driven project and the active team is 
 regarded as the sum of people actively contributing to the 
-libraries. Some people are also hired by the Ethereum Foundation to
-provide a somewhat more solid ground on ongoing development and having people
-with in-depth knowledge as steady contact persons for the libraries.
+libraries, ongoing development is ensured by the JavaScript team from the
+Ethereum Foundation.
 
-For technical questions as well as getting in touch you can use our ``Gitter`` 
-channel:
+For technical questions and getting in touch you can use our ``Discord`` 
+server:
 
-- https://gitter.im/ethereum/ethereumjs
+- https://discord.gg/TNwARpR
 
 Organizational questions are centered and discussed on the ``organization`` repo:
 
@@ -93,23 +100,19 @@ W2 - Library Modernization
 --------------------------
 
 ``EthereumJS`` libraries provide robust and solid implementations surving the
-dedicated purposes, but code and API on many libraries lacks a bit behind
-regarding modern, well-to-read and easy to use JavaScript features.
+dedicated purposes. Along there is an ongoing effort to integrate new
+`Javascript` respetively `TypeScript` language feature and adopt to new coding
+practices to provide the community with secure and easy-to-develop upon libraries
+and APIs.
 
-There is an ongoing effort to modernize the libraries, this nevertheless takes
-time to not introduce new bugs or break existing APIs.
-
-Currently there is a focus on (you are very much invited to help :-)):
+Some things done lately in this regard:
 
 - Using ``ES6`` classes for structuring library components
 - JavaScript ``Promise`` based interfaces (in contrast to ``callback`` logic)
+- `TypeScript` transition of all major libraries
 - Updating on security improving language features (block-scoped variables,...)
 - Improving on code readability (destructuring of objects,...)
 
-.. note::
-   Complementary to this work is the task of establishing a robust transpilation
-   process with tools like ``babel`` and others to make sure that our libraries
-   are usable in environments where modern JS language features are not yet available
 
 W3 - Bug Fixes and Maintenance
 ------------------------------
