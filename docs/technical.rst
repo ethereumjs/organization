@@ -85,98 +85,58 @@ We are getting close though, so if you feel a pressing need here it might be wor
 the discussion.
 
 TypeScript
-^^^^^^^^^^
+----------
 
-All the major **EthereumJS** libraries use `TypeScript <https://www.typescriptlang.org/>`_.
+All the major **EthereumJS** libraries use `TypeScript <https://www.typescriptlang.org/>`_,
 
-TypeScript is a type-safe version of JavaScript that compiles down to JavaScript. Type-safety
-offers a better development experience and improves the reliability and maintainability of
-large projects. TypeScript also produces type definition files to allow upstream projects to
-safely use EthereumJS libraries.
-
-TypeScript language support is a compile-time feature separate from the runtime JavaScript support:
-
-- `TypeScript 3 <https://www.typescriptlang.org/docs/home.html>`_
-
-- ``es5`` target for the compiler
-
-Discouraged language features:
-
-- Use of the ``any`` type
-
-- Experimental features
-
-  - `Decorators <https://www.typescriptlang.org/docs/handbook/decorators.html>`_
-  - ``BigInt`` support
+``TypeScript`` version and configuration is centrally managed in the ``ethereumjs-config``
+`typescript <https://github.com/ethereumjs/ethereumjs-config/tree/master/packages/typescript>`_
+package.
 
 Linting and Formatting
 ----------------------
 
-JavaScript
-^^^^^^^^^^
+Linting and formatting of package source code can be triggered on the different libraries 
+with an ``npm run lint`` respectively a ``npm run lint:fix`` command from ``package.json``.
 
-All ``EthereumJS`` ``JavaScript`` libraries use `standard.js <https://standardjs.com/>`_
-for code formatting and linting with no extra configuration files added or 
-rules adopted, see the `VM repository <https://github.com/ethereumjs/ethereumjs-vm>`_
-as an example.
-
-The ``standard`` dependency in the ``devDependencies`` section of ``package.json``
-should be upgraded on a regular basis. Count in some time for this, since this
-normally goes along with some code changes necessary through the introduction
-of new rules.
-
-Linting can be triggered on the different libraries with an ``npm run lint`` command
-being added to ``package.json``.
-
-.. note::
-   For convenience a ``lint:fix`` command should be added to the various library
-   ``package.json`` files.
-
-TypeScript
-^^^^^^^^^^
-
-``TypeScript`` libraries are using `TSLint <https://palantir.github.io/tslint/>`_
-for linting and `Prettier <https://prettier.io/>`_ for code formatting. See the
-`RLP <https://github.com/ethereumjs/rlp>`_ library for a first example (changes might
-still be located in TypeScript transition PR `#37 <https://github.com/ethereumjs/rlp/pull/37>`_).
-
-.. note::
-   It is intended to integrate both linting and formatting config into a shared
-   `ethereumjs-config <https://github.com/ethereumjs/ethereumjs-config>`_ library
-   (see: :ref:`shared_libs_config`), this effort is still ongoing.
+Tool usage and configuration is centrally managed in the ``ethereumjs-config``
+`lint <https://github.com/ethereumjs/ethereumjs-config/tree/master/packages/lint>`_
+package.
 
 Distribution
 ============
 
-Transpilation
--------------
-
-Current transpilation target: ``ES5``-compatible ``JavaScript`` code
-
-TypeScript
-^^^^^^^^^^
+Transpilation Targets
+---------------------
 
 For ``TypeScript`` libraries, transpilation is done through the ``TypeScript``
 compiler ``tsc`` command line tool.
 
-.. note::
-   ``TODO``: This section has to be expanded.
+See the ``ethereumjs-config``
+`typescript <https://github.com/ethereumjs/ethereumjs-config/tree/master/packages/typescript>`_
+``tsconfig.*.json`` files for an overview on transpilation targets.
 
-Node.js Version Support
------------------------
+Node.js Distribution Versions
+-----------------------------
 
-The following table gives an overview on supported Node versions for distribution:
+The following table gives an overview on the targeted Node.js version support:
 
 ====================== ================= ===============================
 Node Version           Status            Latest Status Change
 ====================== ================= ===============================
 Node.js 4              Dropped           2018-10-01
 Node.js 6              Dropped           2019-02-19
-Node.js 8              Supported         2018-11-01
-Node.js 10             In the works      2018-12-01
-Node.js 11             In the works      2019-02-19
+Node.js 8              Dropped           2020-01-29
+Node.js 10             Supported         2020-03-01
+Node.js 12             Supported         2019-06-01
+Node.js 13             Partly Supported  2020-10-19
+Node.js 14             Mostly Untested   2020-10-19
 ====================== ================= ===============================
 
+For a concrete overview on supported Node.js versions have a look at the 
+``GitHub Actions`` CI setup within the ``.github`` folder of a repository,
+see `build.yml <https://github.com/ethereumjs/merkle-patricia-tree/blob/master/.github/workflows/build.yml>`_
+as an example from the ``merkle-patricia-tree`` library.
 
 Browser Compatibility
 ---------------------
