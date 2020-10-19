@@ -30,21 +30,14 @@ Node.js 12              Supported         2020-10-19
 package-lock Files
 ^^^^^^^^^^^^^^^^^^
 
-**Standalone Libraries**
+The usage of `package-lock` files has been discussed extensively within the EthereumJS
+community and team, see e.g. `this <https://github.com/ethereumjs/merkle-patricia-tree/pull/62>`_ 
+thread for some background on discussions which took place.
 
-Do not use lock files (``package-lock.json``) on repositories 
-(instead add to ``.gitignore``), see 
-`this <https://github.com/ethereumjs/merkle-patricia-tree/pull/62>`_ discussion
-
-**Monorepo**
-
-Since we use hoisting, all package node_modules are brought to the root, so the packages
-do not need package-locks anymore. the only exception is vm which is using one version 
-prior of nyc for a compatibility issue, which may be resolved in the future.
-
-(latest state taken from `this <https://github.com/ethereumjs/ethereumjs-vm/pull/861#issue-480572588>`_
-PR comment.
-
+Latest policy agreement here is that `package-locks` are not regarded as strictly necessary 
+for the libraries but are recently under reconsideration due to other benefits 
+(speed, caching, reliability, reproducibility, etc.) and using a lockfile is taken on a 
+case-by-case basis.
 
 JavaScript
 ----------
