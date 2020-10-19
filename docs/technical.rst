@@ -7,104 +7,87 @@ Technical Reference
 This guide gives an overview on common practices and technical standards
 shared within the ``EthereumJS`` ecosystem.
 
-Source Code
+Development
 ===========
 
-Development Runtime
--------------------
+Node.js
+-------
 
-Node.js Version Support
-^^^^^^^^^^^^^^^^^^^^^^^
+Development Version
+^^^^^^^^^^^^^^^^^^^
 
 Runtime environment for development is `node.js <https://nodejs.org/en/>`_.
 
-Development should always be possible running the last two ``LTS`` Node.js versions,
+Development should always be possible running latest ``LTS`` Node.js version,
 see Node.js `release schedule table <https://github.com/nodejs/Release#release-schedule>`_.
 
 ====================== ================= ===============================
 Node Version           Status            Latest Status Change
 ====================== ================= ===============================
-Node.js 8              Supported         2018-11-01
-Node.js 10             Supported         2018-11-01
+Node.js 12              Supported         2020-10-19
 ====================== ================= ===============================
 
-Node.js Features
-^^^^^^^^^^^^^^^^
+package-lock Files
+^^^^^^^^^^^^^^^^^^
 
-Buffer vs safe-buffer
-"""""""""""""""""""""
-Old Node versions up to versions ``4`` and ``5`` allowed for some unsafe usage
-of the ``Buffer`` API which led to the development of a replacement 
-`safe-buffer <https://github.com/feross/safe-buffer>`_ library. We have now for
-some time dropped support for distribution on all affected Node versions (mainly
-``4``) and usage of ``safe-buffer`` is not needed any more.
+**Standalone Libraries**
 
-.. note::
-   The ``safe-buffer`` is still in 
-   use `on many libraries <https://github.com/search?q=org%3Aethereumjs+safe-buffer&type=Code>`_,
-   this should be removed and updated with direct ``Buffer`` usage.
+Do not use lock files (``package-lock.json``) on repositories 
+(instead add to ``.gitignore``), see 
+`this <https://github.com/ethereumjs/merkle-patricia-tree/pull/62>`_ discussion
 
-Node.js Best Practices
-^^^^^^^^^^^^^^^^^^^^^^
+**Monorepo**
 
-Currently agreed-upon best practices on Node.js development:
+Since we use hoisting, all package node_modules are brought to the root, so the packages
+do not need package-locks anymore. the only exception is vm which is using one version 
+prior of nyc for a compatibility issue, which may be resolved in the future.
 
-- Do not use lock files (``package-lock.json``) on repositories 
-  (instead add to ``.gitignore``), see 
-  `this <https://github.com/ethereumjs/merkle-patricia-tree/pull/62>`_ discussion
+(latest state taken from `this <https://github.com/ethereumjs/ethereumjs-vm/pull/861#issue-480572588>`_
+PR comment.
 
-
-Programming Language
---------------------
-
-We use both `JavaScript <https://www.w3schools.com/js/>`_ and 
-`TypeScript <https://www.typescriptlang.org/>`_ in our libraries, with a 
-transition of libraries to ``TypeScript`` on the way (see: :ref:`roadmap_r181_typescript`).
-
-All libraries are transpiled to a lower common denominator JavaScript version
-(see section below), this section describes what language features are safe to
-be used in the non-transpiled source code of the libraries.
-
-Main aspects to consider when choosing language version and features for 
-the development code base are:
-
-- ``Node.js`` compatibility (see also: `node.green <https://node.green/>`_ Website)
-- Support by transpilation tools in-use
-
-.. note::
-   Not all libraries have transpilation included, have a closer look along
-   when using new language features!
 
 JavaScript
-^^^^^^^^^^
+----------
 
-Features supported, encouraged and discouraged from the different ``JavaScript`` versions:
+All libraries are transpiled to a lower common denominator JavaScript version
+(see section below), this section describes what language features are agreed upon to be
+be used in the non-transpiled source code of the libraries.
+
+
+Supported Versions
+^^^^^^^^^^^^^^^^^^
+
+Features from the following ``JavaScript`` version standards are safe to be used:
 
 - `ES5 <https://www.w3schools.com/js/js_es5.asp>`_
-  
-  - All features supported
-
 - `ES6 / ES2015 <http://es6-features.org>`_
 
-  - All features supported
-  - Usage of ``let``, ``const`` encouraged
-  - Transition to ES6 ``classes`` encouraged
+Partially Supported Versions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Be careful when using language features from the following ``JavaScript`` standards:
 
 - `ES2016 (ES7) <https://medium.freecodecamp.org/ecmascript-2016-es7-features-86903c5cab70>`_
-
-  - ``TODO``
-
 - `ES2017 (ES8) <https://hackernoon.com/es8-was-released-and-here-are-its-main-new-features-ee9c394adf66>`_
+- Beyond
 
-  - ``TODO``
+Feature Notes
+^^^^^^^^^^^^^
 
-.. note::
-   This table does not aim to be complete but just wants to hint to the practically
-   most common pitfall cases!
+**BigInt**
 
+``BigInt`` support is an often requested feature within the ``EthereumJS`` ecosystem and
+we are constantly re-evaluating usage. Current discussion state is that we are not quite there
+on the browser/runtime support side yet to integrate in the libraries, see e.g.
+`Can I use bigint? <https://caniuse.com/bigint>`_ page for context.
+
+We are getting close though, so if you feel a pressing need here it might be worth to re-trigger
+the discussion.
 
 TypeScript
 ^^^^^^^^^^
+
+All the major **EthereumJS** libraries use `TypeScript <https://www.typescriptlang.org/>`_.
 
 TypeScript is a type-safe version of JavaScript that compiles down to JavaScript. Type-safety
 offers a better development experience and improves the reliability and maintainability of
@@ -169,17 +152,6 @@ Transpilation
 -------------
 
 Current transpilation target: ``ES5``-compatible ``JavaScript`` code
-
-JavaScript
-^^^^^^^^^^
-
-For ``JavaScript`` libraries, `Babel <https://babeljs.io/>`_ is used for 
-transpilation, probably the most up-to-date example can be found in the
-`merkle-patricia-tree <https://github.com/ethereumjs/merkle-patricia-tree>`_
-library.
-
-.. note::
-   ``TODO``: This section has to be expanded.
 
 TypeScript
 ^^^^^^^^^^
