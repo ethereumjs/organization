@@ -141,8 +141,10 @@ as an example from the ``merkle-patricia-tree`` library.
 Browser Compatibility
 ---------------------
 
-``TODO``
-
+Most libraries are tested with `Karma <https://karma-runner.github.io>`_
+for browser compatibility, see
+`karma.conf.js <https://github.com/ethereumjs/merkle-patricia-tree/blob/master/karma.conf.js>`_
+from the ``merkle-patricia-tree`` library for an example setup.
 
 Releases
 --------
@@ -294,11 +296,6 @@ for running tests. Have a look at one of the libraries (e.g.
 `merkle-patricia-tree <https://github.com/ethereumjs/merkle-patricia-tree>`_)
 for reference.
 
-.. note::
-   It should be examined if this is a good choice and eventually
-   `Mocha <https://mochajs.org/>`_ should be preferred, see e.g. 
-   `this comparison <https://www.slant.co/versus/12696/12698/~mocha_vs_tape>`_.
-
 Code Coverage
 ^^^^^^^^^^^^^
 
@@ -306,9 +303,9 @@ For coverage runs `nyc <https://istanbul.js.org/>`_ is used. Results are passed 
 to the `coveralls.io <https://coveralls.io/>`_ service for coverage reports on
 CI runs.
 
-.. note::
-   If you stumble over libraries still using ``istanbul`` as a coverage runner,
-   do an update to ``nyc``!
+Tool usage and configuration is centrally managed in the ``ethereumjs-config``
+`coverage <https://github.com/ethereumjs/ethereumjs-config/tree/master/packages/coverage>`_
+package.
 
 .. _documentation:
 
@@ -316,40 +313,25 @@ Documentation
 -------------
 
 Libraries come with an API documentation generated automatically from comments
-in the code. The actual tool and standard for generating API documentation differs
-for JavaScript and TypeScript projects.
+in the code.
+
+To generate API documentation for a TypeScript project, `TypeDoc <https://github.com/TypeStrong/typedoc>`_ is employed.
+By default, TypeDoc generates HTML documentation. In order to generate Markdown suitable for GitHub, the
+`typedoc-plugin-markdown <https://github.com/tgreyuk/typedoc-plugin-markdown>`_ can be used as a theme for TypeDoc.
 
 Apart from that, the following documentation should be kept up-to-date:
 
 - ``README`` with setup and installation instructions
 - Usage instructions, up-to-date code examples
 
-JavaScript
-^^^^^^^^^^^^^
-
-In many of the JavaScript libraries `documentation.js <https://documentation.js.org/>`_ is used
-for generating an API documentation from `JSDoc <http://usejsdoc.org/>`_
-comments.
-
-TypeScript
-^^^^^^^^^^^^^
-
-To generate API documentation for a TypeScript project, `TypeDoc <https://github.com/TypeStrong/typedoc>`_ is employed.
-By default, TypeDoc generates HTML documentation. In order to generate Markdown suitable for GitHub, the
-`typedoc-plugin-markdown <https://github.com/tgreyuk/typedoc-plugin-markdown>`_ can be used as a theme for TypeDoc.
-
 .. _continuous_integration:
 
 Continuous Integration (CI)
 ---------------------------
 
-Most ``EthereumJS`` libraries use `Travis CI <https://travis-ci.org/>` for CI
-runs on every PR submitted. Have a look at a ``.travis.yml`` file in the 
-repository you are interested in to get an overview on what is run during the
-CI process.
-
-One exception is the EthereumJS VM which is using ``CircleCI`` as a platform
-for performance reasons.
+All ``EthereumJS`` libraries use `GitHub Actions <https://github.com/features/actions>` for CI
+runs on every PR submitted. Have a look at the files in the ``.github/workflows`` folder from a 
+repository to get an overview on what is run during the CI process.
 
 Security
 ========
@@ -410,8 +392,7 @@ ethereumjs-testing
 
 The `ethereumjs-testing <https://github.com/ethereumjs/ethereumjs-testing>`_
 library is a proxy library for the common `Ethereum Tests <https://github.com/ethereum/tests>`_
-consensus tests. There are additional methods for easily select a specific
-subset of the tests.
+consensus tests.
 
 The common test library is integrated as a submodule and there are tagged
 releases (no publishing to ``npm`` due to size constraints) which can be used 
@@ -419,22 +400,10 @@ for running the latest tests in ``JavaScript`` libraries.
 
 .. _shared_libs_common:
 
-ethereumjs-common
------------------
-
-The `ethereumjs-common` library provides access to chain and hardfork specific
-parameters as well as utilities to easier manage hardfork-specific logic 
-within other ``EthereumJS`` libraries.
-
-.. _shared_libs_config:
-
 ethereumjs-config
 -----------------
 
-``[IN DEVELOPMENT]``
-
 The `ethereumjs-config <https://github.com/ethereumjs/ethereumjs-config>`_ library
-aims to reduce redundancy on library configuration by providing a unified set
-of configuration options (e.g. on linting or code formatting) which can be integrated
-within other libraries.
+provides a set of unified configuration options (e.g. on the ``TypeScript`` configuration
+or on the linting setup) for the various ``EthereumJS`` libraries.
 
