@@ -38,12 +38,6 @@ to start especially for new contributors. This includes:
 All these things are a good way to gently get in touch with the inner workings
 of a library without directly have to manipulate production code directly.
 
-Gitcoin
--------
-
-``TODO``
-
-
 How to Start
 ============
 
@@ -68,7 +62,3 @@ Get in Touch
 Generally: just get in touch. Early on - see :ref:`contact` section. Feel free to
 ask everything you need to know, there is no question which shouldn't been asked
 and there will likely be someone who can give you some guidance along the way.
-
-
-
-
