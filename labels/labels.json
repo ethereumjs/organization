@@ -120,6 +120,10 @@
     "color": "#e3e3e3"
   },
   {
+    "name": "type: maintenance",
+    "color": "#e3e3e3"
+  },
+  {
     "name": "type: meta",
     "color": "#e3e3e3"
   },
