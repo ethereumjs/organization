@@ -28,6 +28,10 @@
     "color": "#fdcfc2"
   },
   {
+    "name": "effort: E0 minutes",
+    "color": "#a5e3be"
+  },
+  {
     "name": "effort: E1 hours",
     "color": "#a5e3be"
   },
@@ -44,11 +48,19 @@
     "color": "#a5e3be"
   },
   {
+    "name": "effort: E5 years",
+    "color": "#a5e3be"
+  },
+  {
     "name": "eval: can't reproduce",
     "color": "#c3e2f3"
   },
   {
     "name": "eval: duplicate",
+    "color": "#c3e2f3"
+  },
+  {
+    "name": "eval: needs analysis",
     "color": "#c3e2f3"
   },
   {
@@ -113,6 +125,10 @@
   },
   {
     "name": "type: feature",
+    "color": "#e3e3e3"
+  },
+  {
+    "name": "type: breaking change",
     "color": "#e3e3e3"
   },
   {
