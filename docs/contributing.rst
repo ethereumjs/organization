@@ -11,8 +11,8 @@ Where to Contribute
 Picking up some Issues
 ----------------------
 There are labelled issues on all our libraries, see e.g. the issue pages of the
-`VM <https://github.com/ethereumjs/ethereumjs-vm/issues>`_ or the 
-`Merkle Tree <https://github.com/ethereumjs/merkle-patricia-tree/issues>`_
+`VM <https://github.com/ethereumjs/ethereumjs-monorepo/labels/package%3A%20vm>`_ or the 
+`Merkle Tree <https://github.com/ethereumjs/ethereumjs-monorepo/labels/package%3A%20trie>`_
 libraries, sorting issues on things like effort needed, priority or type.
 
 Feel free to pick any issue you think is suitable for you to work on, then you
