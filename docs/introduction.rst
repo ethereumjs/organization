@@ -10,16 +10,15 @@ Foundation**. Work is mainly done within the following GitHub organization:
 
 - https://github.com/ethereumjs
 
-Our central repository is the `ethereumjs-vm <https://github.com/ethereumjs/ethereumjs-vm>`_ 
-monorepo hosting a full featured `TypeScript` Ethereum VM implementation as well as
+Our central repository is the `ethereumjs-monorepo <https://github.com/ethereumjs/ethereumjs-monorepo>`_ hosting a full featured `TypeScript` Ethereum VM implementation as well as
 related packages like:
 
 - Structural blockchain component representations like e.g. the 
-  `block <https://github.com/ethereumjs/ethereumjs-vm/tree/master/packages/block>`_ or
-  `tx <https://github.com/ethereumjs/ethereumjs-vm/tree/master/packages/tx>`_ packages
-- The `common <https://github.com/ethereumjs/ethereumjs-vm/tree/master/packages/common>`_
+  `block <https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/block>`_ or
+  `tx <https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/tx>`_ packages
+- The `common <https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/common>`_
   package providing central access to chain and hardfork settings
-- An `Ethash <https://github.com/ethereumjs/ethereumjs-vm/tree/master/packages/ethash>`_
+- An `Ethash <https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/ethash>`_
   implementation
 
 Other noteworthy libraries out of the monorepo scope are e.g. an
@@ -78,7 +77,7 @@ The following is an overview on ongoing work tasks to get an idea on the current
 focus of work. This is also serving internal accounting purposes.
 
 .. note::
-   This list is focussing on reoccuring work tasks, for an overview on 
+   This list is focussing on reoccurring work tasks, for an overview on 
    dedicated new projects have a look at the :ref:`roadmap` section.
 
 
@@ -87,7 +86,7 @@ W1 - Virtual Machine Development
 
 One strong emphasis of ``EthereumJS`` work is on maintaining and further developing
 a robust and up-to-date JavaScript virtual machine 
-implementation (`ethereumjs-vm <https://github.com/ethereumjs/ethereumjs-vm>`_).
+implementation (`ethereumjs-monorepo <https://github.com/ethereumjs/ethereumjs-monorepo>`_).
 
 Main tasks around this are:
 
@@ -99,7 +98,7 @@ Main tasks around this are:
 W2 - Library Modernization
 --------------------------
 
-``EthereumJS`` libraries provide robust and solid implementations surving the
+``EthereumJS`` libraries provide robust and solid implementations serving the
 dedicated purposes. Along there is an ongoing effort to integrate new
 `Javascript` respetively `TypeScript` language feature and adopt to new coding
 practices to provide the community with secure and easy-to-develop upon libraries
@@ -130,8 +129,8 @@ Main tasks around this:
 W4 - Testing and CI
 -------------------
 
-To provide a high level of reliable we target a high test coverage on all of our
-libraries and writing new tests and integrate these in the everyday work process
+To provide a high level of reliability we target a high test coverage on all of our
+libraries and writing new tests and integrating these in the everyday work process
 (CI) is an ongoing effort.
 
 Efforts include:
@@ -150,7 +149,7 @@ There is a high level of engagement from the community with the different
 updates as well as high-quality and broadly scoped feature contributions from
 the community.
 
-We are determined to put substantial ressources here to further support
+We are determined to put substantial resources here to further support
 exchange with and engagement from the community.
 
 Related tasks are:
@@ -166,7 +165,7 @@ W6 - Accessibility
 
 Very much related to the community efforts (W5) is the goal of making libraries
 generally as easily approachable as possible and so to lower the barrier to 
-engage and minimize the need to to do one-to-one explanations on how things work.
+engage and minimize the need to do one-to-one explanations on how things work.
 
 Tasks include:
 
