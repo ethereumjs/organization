@@ -25,7 +25,7 @@ indicating that they are in particular suitable to get started.
 Some generic Tasks
 ------------------
 
-There are also various generic tasks which constantly needs help, you can also 
+There are also various generic tasks which constantly need help, you can also 
 have a look at the :ref:`ongoing_work_tasks` section to get an overview here.
 
 Many of these things are not listed as issues, but are nevertheless a good place
