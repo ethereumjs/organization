@@ -43,7 +43,7 @@ JavaScript
 ----------
 
 All libraries are transpiled to a lower common denominator JavaScript version
-(see section below), this section describes what language features are agreed upon to be
+(see section below), this section describes what language features are agreed upon to
 be used in the non-transpiled source code of the libraries.
 
 
@@ -201,7 +201,7 @@ Separate PRs for Separate Features
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 If you have separate things you want to change on a library, do separate PRs
 for this. So if you e.g. have some ideas for how to improve the build process and
-want to fix some bug from an issue, theses are two separate PRs.
+want to fix some bug from an issue, these are two separate PRs.
 
 This is a precondition for a successful review of a PR, since a reviewer has
 a smaller subset of changes and can connect changes definitively to a certain feature.
@@ -366,7 +366,7 @@ Regular Dependency Updates
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 Dependency versions should be updated on a regular basis, this is also very
 welcome to be done as a ``first-time-contributor`` PR. Don't underestimate
-this task though, since a dependency update almost always come along with some
+this task though, since a dependency update almost always comes along with some
 necessary changes on a library. It is recommended to always only do one
 dependency at a time, since it becomes easier to attribute if things break at
 some point.
