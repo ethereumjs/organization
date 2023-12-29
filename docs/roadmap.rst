@@ -12,7 +12,7 @@ Active Projects
 .. note::
    These docs are currently not used to track active projects. Please have a look at the 
    ``EthereumJS`` `Organization repository <https://github.com/ethereumjs/organization/issues>`_ issues
-   to get an impression what is currently being discussed and worked on.
+   to get an impression of what is currently being discussed and worked on.
 
 .. _roadmap_r182_client:
 
@@ -52,7 +52,7 @@ transport to RLPx/Devp2p that enables the in-browser light client use-case. In t
 we hope to implement a Clique PoA engine and test it on the Goerli testnet, and later build
 a working Ethereum 2.0 stateless client.
 
-At a later point it is also be desired to have a dedicated website for the client
+At a later point it is also desired to have a dedicated website for the client
 (similar to https://geth.ethereum.org/) to have a more visible entry point and source
 for information around the client for the community.
 
@@ -113,7 +113,7 @@ language for ``EthereumJS`` libraries once :ref:`roadmap_r181_typescript` is
 completed.
 
 While ``AssemblyScript`` is syntactically compatible with ``(e)WASM`` it will
-nevertheless take some signifcant high-level work to make this a trusted
+nevertheless take some significant high-level work to make this a trusted
 Ethereum smart contract language.
 
 Tasks in this regard are:
@@ -166,7 +166,7 @@ Timeline
 
 - ``February 2019``
 
-  - ✅  Three+ more completed transitions (``acount``, ``util``, ``common``)
+  - ✅  Three+ more completed transitions (``account``, ``util``, ``common``)
   - ✅  Stable toolchain, ``ethereumjs-config`` ``v1.1.0`` release
   - ✅  TypeScript preparation for ``VM``, ``merkle-patricia-tree`` library (code modernization, ``ES6``)
 
@@ -199,7 +199,7 @@ to facilitate eWASM research and prepare for when eWASM makes it to mainnet.
 The current implementation is tightly coupled to EVM as the only VM. Therefore
 part of this project is to refactor parts of ethereumjs-vm that are relevant
 to the VM, to make them modular enough for eWASM to be integrated. This refactoring
-is occuring hand-in-hand with the modernization effort.
+is occurring hand-in-hand with the modernization effort.
 
 Timeline
 ^^^^^^^^
@@ -230,7 +230,7 @@ Reason
 ^^^^^^
 
 Project currently stalled due to too large uncertainties on the Ethereum eWASM roadmap. There is some occasional experimentation
-happening on the sideline though and project might be resumed on a later stage.
+happening on the sideline though and project might be resumed at a later stage.
 
 Canceled Projects
 =================
