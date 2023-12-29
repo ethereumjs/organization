@@ -27,7 +27,7 @@ the `RLP <https://github.com/ethereumjs/rlp>`_ serialization library or a widely
 `Util <https://github.com/ethereumjs/ethereumjs-util>`_ library providing utility functions for
 things like hashing, signatures as well as helpers for address and account management.
 
-Have a look at the organizational GitHub overview page linked above to get an impression what
+Have a look at the organizational GitHub overview page linked above to get an impression of what
 is currently being worked on as well as the libraries available.
 
 Focus and related Projects
@@ -100,7 +100,7 @@ W2 - Library Modernization
 
 ``EthereumJS`` libraries provide robust and solid implementations serving the
 dedicated purposes. Along there is an ongoing effort to integrate new
-`Javascript` respetively `TypeScript` language feature and adopt to new coding
+`Javascript` respectively `TypeScript` language feature and adopt to new coding
 practices to provide the community with secure and easy-to-develop upon libraries
 and APIs.
 

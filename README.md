@@ -12,7 +12,7 @@ Use the [issue tracker](https://github.com/ethereumjs/organization/issues) as a 
 
 Updates within the ``EthereumJS`` ecosystem - also posted on reddit on a monthly basis - can be found in the [posts](./posts/) folder.
 
-Have a look at the list of [all current open issues](https://waffle.io/ethereumjs/organization) for an impression what is being worked on.
+Have a look at the list of [all current open issues](https://waffle.io/ethereumjs/organization) for an impression of what is being worked on.
 
 ## Communication
 
